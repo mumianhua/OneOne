@@ -1,4 +1,4 @@
-name: "build kite test"
+name: "xf build kite test"
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
     branches: [ 'develop', 'main', 'release_**' ]
 
 jobs:
-  analyze:
-    name: Analyze
+  xf:
+    name: xffff
     runs-on: ubuntu-latest
     permissions:
       actions: read
