@@ -16,7 +16,7 @@ jobs:
         uses: "buildkite/trigger-pipeline-action@v2.0.0"
         with:
           buildkite_api_access_token:  "bkua_885b7a4c722aba19ffa298c4ec54d42b25fa287b"
-          pipeline: "010-test"
+          pipeline: "justTest-111/notwell"
           message: Triggered test
           branch: develop
           commit: HEAD
