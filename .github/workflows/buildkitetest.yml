@@ -1,0 +1,22 @@
+name: gitActionTest
+
+on:
+  push:
+    branches: [ 'develop', 'main', 'release_**' ]
+    pull_request:
+      # The branches below must be a subset of the branches above
+      branches: [ 'develop', 'main', 'release_**' ]
+
+jobs:
+  tests:
+    name: test trigger build kite
+    runs-on: ubuntu-latest
+    steps:
+      - name: trigger build kite
+        uses: "buildkite/trigger-pipeline-action@v2.0.0"
+        with:
+          buildkite_api_access_token:  "bkua_885b7a4c722aba19ffa298c4ec54d42b25fa287b"
+          pipeline: "010-test"
+          message: Triggered test
+          branch: develop
+          commit: HEAD
