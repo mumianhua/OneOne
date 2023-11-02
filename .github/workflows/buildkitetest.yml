@@ -10,7 +10,7 @@ on:
 jobs:
   xf:
     name: xffff
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
     permissions:
       actions: read
       contents: read
