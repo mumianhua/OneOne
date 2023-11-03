@@ -38,14 +38,14 @@ jobs:
             echo "No access to secrets"
             exit 1
           fi
-      - name: Trigger a Buildkite Build
-          uses: "buildkite/trigger-pipeline-action@v2.0.0"
-          env:
-            BUILDKITE_API_ACCESS_TOKEN: ${{ secrets.JUST_BUILD_KITE }}
-            pipeline: "nnnnnnnnnnnn/notwell"
-            branch: "develop"
-            commit: "HEAD"
-            message: ":github: Triggered from a GitHub Action"
-            build_env_vars: '{"TRIGGERED_FROM_GHA": "true"}'
-            build_meta_data: '{"FOO": "bar"}'
-            ignore_pipeline_branch_filter: true
+#      - name: Trigger a Buildkite Build
+#          uses: "buildkite/trigger-pipeline-action@v2.0.0"
+#          env:
+#            BUILDKITE_API_ACCESS_TOKEN: ${{ secrets.JUST_BUILD_KITE }}
+#            pipeline: "nnnnnnnnnnnn/notwell"
+#            branch: "develop"
+#            commit: "HEAD"
+#            message: ":github: Triggered from a GitHub Action"
+#            build_env_vars: '{"TRIGGERED_FROM_GHA": "true"}'
+#            build_meta_data: '{"FOO": "bar"}'
+#            ignore_pipeline_branch_filter: true
