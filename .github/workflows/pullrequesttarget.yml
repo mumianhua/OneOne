@@ -5,6 +5,7 @@ on:
     types: [opened, synchronize]
 jobs:
   demo:
+    name: yyyyy
     runs-on: ubuntu-latest
     steps:
       - name: Get User Permission
