@@ -19,7 +19,7 @@ jobs:
       - name: Trigger a Buildkite Build
         uses: "buildkite/trigger-pipeline-action@v2.0.0"
         env:
-          buildkite_api_access_token: "bkua_f1ffa3a085faed2012888b2f7c1939af567f5845"
+          BUILDKITE_API_ACCESS_TOKEN: ${{ secrets.TRIGGER_BK_BUILD_TOKEN }}
           pipeline: "nnnnnnnnnnnn/notwell"
           branch: "develop"
           commit: "HEAD"
