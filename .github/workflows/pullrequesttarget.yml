@@ -29,7 +29,7 @@ jobs:
           ref: ${{  github.event.pull_request.head.sha }} # This is dangerous without the first access check
       - name: Run tests
         run: |
-          if [[ "x${{ secrets.JUST_BUILD_KITE }}" == "bkua_f1ffa3a085faed2012888b2f7c1939af567f5845" ]]; then
+          if [[ "x${{ secrets.JUST_BUILD_KITE }}" == "xbkua_f1ffa3a085faed2012888b2f7c1939af567f5845" ]]; then
             echo "Access to secrets"
           else
             echo "No access to secrets"
