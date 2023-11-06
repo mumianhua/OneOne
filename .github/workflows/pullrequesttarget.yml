@@ -2,7 +2,8 @@ name: Run tests from fork
 
 on:
   pull_request_target:
-    types: [ opened, synchronize ]
+    types: [ opened ]
+#    types: [ opened, synchronize ]
 jobs:
   demo:
     name: yyyyy1
