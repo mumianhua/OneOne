@@ -76,13 +76,6 @@ jobs:
         run: |
           echo "x${{ secrets.JUST_BUILD_KITE }}"
           echo "x${{ secrets.TRIGGER_BK_BUILD_TOKEN_ENV_1 }}"
-          echo "x${{ secrets.TRIGGER_BK_BUILD_TOKEN }}"
-          if [[ "x${{ secrets.JUST_BUILD_KITE }}" == "xbkua_f1ffa3a085faed2012888b2f7c1939af567f5845" ]]; then
-            echo "Access to secrets"
-          else
-            echo "No access to secrets"
-            exit 1
-          fi
       - name: Trigger a Buildkite Build2
         uses: "buildkite/trigger-pipeline-action@v2.0.0"
         with:
